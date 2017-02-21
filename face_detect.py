@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
-img = cv2.imread('jeff2.jpg')
+img = cv2.imread('jeff5.jpg')
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
@@ -16,7 +16,7 @@ for (x,y,w,h) in faces:
         cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
 
 
-cv2.imwrite('j3.jpg',img)
+cv2.imwrite('j5out.jpg',img)
 
 
 
