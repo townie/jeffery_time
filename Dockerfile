@@ -10,5 +10,5 @@ COPY . /data
 WORKDIR data
 
 # run server
-EXPOSE 5222
+EXPOSE 5222 80
 CMD python3 server.py

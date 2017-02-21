@@ -1,22 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+
+
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
           rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="static/imgslider.min.css">
+
+    <script type="text/javascript" src="static/imgslider.min.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <h3 class="text-muted">How To Upload a File</h3>
+        <h3 class="text-muted">Jefferize your pictures</h3>
       </div>
       <hr/>
-      <div>
-      
+
+
+
       <form action="upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="file"><br /><br />
-        <input type="submit" value="Upload">
+        <input type="file" name="file" class="custom-file-input" style="font-size: 2em; color:red"><br /><br />
+        <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+
       </form>
+
+
+
+ 
+    <div class="slider">
+     <div class="slider responsive">
+      <div class="left image">
+        <img src="static/before.jpg"/>
+      </div>
+      <div class="right image">
+        <img src="static/after.jpg"/>
       </div>
     </div>
-  </body>
+    </div>
+
+
+
+    </div>      </div>
+
+      <script type="text/javascript">
+      $('.slider').slider();
+
+      </script>
+  </body>  
+
 </html>

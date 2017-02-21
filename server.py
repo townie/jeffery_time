@@ -3,20 +3,20 @@ import twilio.twiml
 import os
 
 import face_detect
-
+import logging
 import numpy as np
 
 app = Flask(__name__)
 
-@app.route("/", methods=['GET', 'POST'])
-def hello_monkey():
-  """Respond to incoming calls with a simple text message."""
+# @app.route("/", methods=['GET', 'POST'])
+# def hello_monkey():
+#   """Respond to incoming calls with a simple text message."""
 
-  # resp = twilio.twiml.Response()
-  # with resp.message("Hello, Mobile Monkey") as m:
-  #   m.media("https://demo.twilio.com/owl.png")
-  resp="woot"
-  return str(resp)
+#   # resp = twilio.twiml.Response()
+#   # with resp.message("Hello, Mobile Monkey") as m:
+#   #   m.media("https://demo.twilio.com/owl.png")
+#   resp="woot"
+#   return str(resp)
 
 # We'll render HTML templates and access data sent by POST
 # using the request object from flask. Redirect and url_for
@@ -78,4 +78,10 @@ def uploaded_file(filename):
 
 
 if __name__ == "__main__":
-   app.run(host="0.0.0.0", port=5222, debug=True)
+    try:
+        logging.info("starting on port 80")
+        app.run(host="0.0.0.0", port=80, debug=True)
+
+    except:
+        logging.warn('port 80 failed falling back to 5222')
+        app.run(host="0.0.0.0", port=5222, debug=True)
