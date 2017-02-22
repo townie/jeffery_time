@@ -69,7 +69,6 @@ def upload():
 # an image, that image is going to be show after the upload
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
-    # import pdb; pdb.set_trace()
     name, fmt = filename.split(".")
     final_img = face_detect.jeffify(img_folder='uploads',name = name,img_fmt = fmt, overlay_png="jeffface")
 
