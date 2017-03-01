@@ -4,4 +4,8 @@
 ```
 docker run -it -v $PWD:/data kavolorn/opencv bash
 ```
-http://stackoverflow.com/questions/14063070/overlay-a-smaller-image-on-a-larger-image-python-opencv
+TODO:
+1) better mobile image handling
+2) non-recompute
+3) make it less computationally expensive
+4) cache results
