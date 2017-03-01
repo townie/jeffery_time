@@ -1,7 +1,7 @@
 # Detect a face and replace it with Jeffs face
 
 
-Uses openCv's Haas filters to find faces and then scales repalcement image to scale and then `photoshops` it on top of face locations.
+Uses openCv's Haar cascade filters to find faces and then scales repalcement image to scale and then `photoshops` it on top of face locations.
 
 ```
 docker run -it -v $PWD:/data kavolorn/opencv bash
